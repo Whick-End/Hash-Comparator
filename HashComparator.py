@@ -11,7 +11,7 @@ import time
 import sys
 import os
 
-begin = "\033[93m\033[1m[+]\033[1m\033[93m"     #"[+]" in Yellow
+begin = "\033[93m\033[1m[+]\033[1m\033[93m"     # [+] in Yellow
 clear = lambda: os.system("clear")              #Create a function to clear the terminal
 
 class hashFile:
@@ -68,4 +68,3 @@ if __name__ == '__main__':
     sys.stdout.write("\x1b[8;{0};{1}t".format(20,90))                   #Terminal resize
     result(same, file1, file2, hashingFile1.hash, hashingFile2.hash)    #Call result()
     print("\033[97m")                                                   #Reset normal color
-
