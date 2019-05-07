@@ -64,7 +64,7 @@ if __name__ == '__main__':
     hashingFile1, hashingFile2 = hashFile(file1), hashFile(file2)       #Create object
     hashingFile1.hash()                                                 #For each files, find their hash
     hashingFile2.hash()                                             
-    same = True if hashingFile1.hash == hashingFile2.hash else False    #Same egal True if each hash are egal else same egal False
+    same = all([hashFile.hash, hashingFile2.hash])                      #If hashFile.hash egal hashFile2.hash then same is True
     sys.stdout.write("\x1b[8;{0};{1}t".format(20,90))                   #Terminal resize
     result(same, file1, file2, hashingFile1.hash, hashingFile2.hash)    #Call result()
     print("\033[97m")                                                   #Reset normal color
