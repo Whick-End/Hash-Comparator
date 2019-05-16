@@ -30,7 +30,6 @@ class hashFile:
                 data = file.read()              #Read data
                 hasher.update(data)             #Update Hash
                 self.hash = hasher.hexdigest()  #self.hash egal the hash of file
-                file.close()                    #Close the file
         except IOError:                         #File not found
             print("\033[91mFile not found.\033[91m")
             exit(0)                             #Exit the program
