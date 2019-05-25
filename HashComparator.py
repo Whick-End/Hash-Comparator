@@ -35,7 +35,7 @@ class hashFile:
             exit(0)                             #Exit the program
 
 
-def menu():                                     #Menu of program
+def display():                                  #Menu of program
     print(begin + "=" * 48 + "[+]")
     print(begin + "*" * 20 +  "  MENU  "  + "*" * 20 + "[+]")
     file1 = input("Enter the name of the first file: ")
@@ -59,7 +59,7 @@ def result(same, file1, file2, hash1, hash2):
 if __name__ == '__main__':
     sys.stdout.write("\x1b[8;{0};{1}t".format(20,54))                   #Terminal resize
     clear()                                                             #Clear the terminal
-    file1, file2 = menu()                                               #Recover the names of files
+    file1, file2 = display()                                            #Recover the names of files
     hashingFile1, hashingFile2 = hashFile(file1), hashFile(file2)       #Create object
     hashingFile1.hash()                                                 #For each files, find their hash
     hashingFile2.hash()                                             
